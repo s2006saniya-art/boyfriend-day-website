@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Happy Boyfriend's Day ❤️</title>
+
+
+<style>
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   PAGE 1 — ENVELOPE
+========================================================= */
+
+.envelope-screen {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff7ea 0%,
+            #f1d1ad 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope {
+
+    width: min(330px, 75vw);
+    height: 220px;
+
+    position: relative;
+
+    background: #a82d38;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(80,25,25,.25);
+
+    cursor: pointer;
+}
+
+.envelope::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #8f222b;
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 55%,
+            100% 0
+        );
+
+    z-index: 3;
+}
+
+.envelope::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #b8323b;
+
+    clip-path:
+        polygon(
+            0 100%,
+            50% 45%,
+            100% 100%
+        );
+
+    z-index: 2;
+}
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #a32932;
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 48%,
+            100% 0
+        );
+
+    transform-origin: top;
+
+    transition: transform .8s ease;
+
+    z-index: 5;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.gold-seal {
+
+    position: absolute;
+
+    width: 72px;
+    height: 72px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffe99a 0%,
+            #d89d24 55%,
+            #a66b0e 100%
+        );
+
+    border: 4px solid #f6d86b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    color: #7d4b0a;
+
+    z-index: 10;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.2);
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.gold-seal:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+}
+
+.envelope-text {
+
+    position: absolute;
+
+    top: calc(50% + 125px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #72252b;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PAGE 2 — COVER
+========================================================= */
+
+.cover-screen {
+
+    background: #d9b78d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.vintage-card {
+
+    width: min(850px,92vw);
+    height: min(90vh,650px);
+
+    background:
+        linear-gradient(
+            rgba(255,248,232,.9),
+            rgba(247,226,193,.9)
+        );
+
+    border: 10px solid #f0dfc1;
+
+    outline:
+        2px solid #9d6b48;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(65,35,20,.3);
+}
+
+.vintage-card::before,
+.vintage-card::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    color: #a92f3c;
+
+    font-size: 55px;
+}
+
+.vintage-card::before {
+    top: 20px;
+    left: 25px;
+}
+
+.vintage-card::after {
+    bottom: 20px;
+    right: 25px;
+}
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 10;
+
+    text-align: center;
+
+    padding-top: 65px;
+
+    color: #7c2931;
+}
+
+.cover-small {
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.cover-title {
+
+    font-size:
+        clamp(40px,7vw,75px);
+
+    line-height: .95;
+
+    margin-top: 10px;
+
+    color: #a32835;
+
+    font-weight: bold;
+}
+
+.cover-love {
+
+    font-size:
+        clamp(24px,4vw,42px);
+
+    margin-top: 15px;
+
+    font-style: italic;
+}
+
+.cover-heart {
+
+    font-size: 35px;
+
+    margin-top: 5px;
+}
+
+.couple-container {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -2px;
+
+    transform: translateX(-50%);
+
+    width:
+        min(300px,40vw);
+
+    z-index: 6;
+
+    pointer-events: none;
+}
+
+.couple {
+
+    width: 100%;
+
+    display: block;
+
+    transform: translateY(110%);
+
+    animation:
+        couplePop
+        1.2s
+        ease-out
+        .3s
+        forwards;
+}
+
+@keyframes couplePop {
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+.tap-button {
+
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    border: none;
+
+    background: #a82d38;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PAGE 3 — LETTER
+========================================================= */
+
+.scrapbook-screen {
+
+    background: #e9d5b7;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.scrapbook {
+
+    width: min(1000px,95vw);
+
+    height: min(90vh,700px);
+
+    background: #fff4dc;
+
+    position: relative;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 30px rgba(70,40,20,.25);
+
+    border:
+        3px solid #d2b78f;
+
+    overflow: auto;
+}
+
+.scrapbook-title {
+
+    text-align: center;
+
+    font-family: cursive;
+
+    color: #9d303b;
+
+    font-size:
+        clamp(30px,5vw,48px);
+
+    margin-bottom: 20px;
+}
+
+.letter-area {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #573e32;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+.letter-area p {
+    margin-bottom: 12px;
+}
+
+.photos {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.photos img {
+
+    width: 150px;
+    height: 170px;
+
+    object-fit: cover;
+
+    padding: 8px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.18);
+}
+
+.photos img:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+.photos img:nth-child(2) {
+    transform: rotate(3deg);
+}
+
+.photos img:nth-child(3) {
+    transform: rotate(-2deg);
+}
+
+.scrap-next {
+
+    display: block;
+
+    margin: 25px auto 0;
+
+    padding: 11px 25px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #a82d38;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PAGE 4 — YOU ARE MY
+========================================================= */
+
+.page-four {
+
+    background:
+        linear-gradient(
+            #f9e7ef,
+            #f8dfeb
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.love-paper {
+
+    width: min(1070px,95vw);
+
+    height: min(92vh,720px);
+
+    position: relative;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.3),
+            rgba(255,255,255,.3) 4px,
+            transparent 4px,
+            transparent 8px
+        ),
+        #f8e7dc;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 10px 35px rgba(80,50,50,.2);
+
+    overflow: hidden;
+}
+
+.love-title {
+
+    text-align: center;
+
+    padding-top: 35px;
+
+    font-family:
+        "Trebuchet MS",
+        cursive;
+
+    color: #a54b67;
+
+    font-size:
+        clamp(42px,7vw,70px);
+
+    letter-spacing: 4px;
+
+    font-weight: 800;
+}
+
+.love-title::after {
+
+    content: "♡";
+
+    display: block;
+
+    font-size: 28px;
+
+    margin-top: -8px;
+}
+
+
+/* CENTER PHOTO */
+
+.center-photo {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-2deg);
+
+    width: 270px;
+    height: 315px;
+
+    object-fit: cover;
+
+    padding: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 7px 20px rgba(80,40,50,.25);
+
+    z-index: 5;
+}
+
+
+/* LABELS */
+
+.love-label {
+
+    position: absolute;
+
+    font-family:
+        "Trebuchet MS",
+        cursive;
+
+    color: #714a52;
+
+    font-size:
+        clamp(18px,2.3vw,27px);
+
+    z-index: 10;
+
+    white-space: nowrap;
+}
+
+.label-one {
+    left: 8%;
+    top: 30%;
+}
+
+.label-two {
+    right: 8%;
+    top: 30%;
+}
+
+.label-three {
+    left: 4%;
+    top: 60%;
+}
+
+.label-four {
+    right: 4%;
+    top: 60%;
+}
+
+.label-five {
+    left: 15%;
+    bottom: 9%;
+}
+
+.label-six {
+    right: 15%;
+    bottom: 9%;
+}
+
+
+/* =========================================================
+   PERFECT CURVED ARROWS
+========================================================= */
+
+.curved-arrow {
+
+    position: absolute;
+
+    width: 230px;
+    height: 150px;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    overflow: visible;
+}
+
+.curved-arrow path {
+
+    fill: none;
+
+    stroke: #ae7083;
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+.arrow-top-left {
+    left: 17%;
+    top: 32%;
+}
+
+.arrow-top-right {
+    right: 17%;
+    top: 32%;
+}
+
+.arrow-bottom-left {
+    left: 16%;
+    top: 55%;
+}
+
+.arrow-bottom-right {
+    right: 16%;
+    top: 55%;
+}
+
+
+/* DECORATIONS */
+
+.doodle {
+
+    position: absolute;
+
+    color: #bd7086;
+
+    font-size: 28px;
+
+    z-index: 2;
+}
+
+.doodle-one {
+    top: 12%;
+    left: 10%;
+}
+
+.doodle-two {
+    top: 13%;
+    right: 11%;
+}
+
+.doodle-three {
+    bottom: 7%;
+    left: 7%;
+}
+
+.doodle-four {
+    bottom: 8%;
+    right: 8%;
+}
+
+
+/* BUTTON */
+
+.click-me {
+
+    position: absolute;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #b75c78;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 25px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    font-family: cursive;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(55,25,35,.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+
+    padding: 20px;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-card {
+
+    width: min(540px,90vw);
+
+    background: #fff5e9;
+
+    padding: 38px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.3);
+
+    color: #68434c;
+}
+
+.popup-card h2 {
+
+    font-family: cursive;
+
+    color: #a74966;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.popup-card p {
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+.close-popup {
+
+    margin-top: 20px;
+
+    border: none;
+
+    background: #a74966;
+
+    color: white;
+
+    padding: 10px 25px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PAGE 5 — HEART PHOTO COLLAGE
+========================================================= */
+
+.memory-screen {
+
+    background:
+        #d9cfbc;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+}
+
+.memory-paper {
+
+    width: min(1120px,97vw);
+
+    height: min(95vh,780px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            #f8f1df 0px,
+            #f8f1df 5px,
+            #f1e8d6 6px
+        );
+
+    border: 6px solid #eee4cf;
+
+    box-shadow:
+        0 12px 35px rgba(70,45,25,.30);
+}
+
+
+/* =========================================================
+   FINAL PAGE TITLE
+========================================================= */
+
+.memory-title {
+
+    position: relative;
+
+    z-index: 50;
+
+    text-align: center;
+
+    margin-top: 13px;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size:
+        clamp(45px,6.5vw,75px);
+
+    color: #171313;
+
+    font-weight: 500;
+
+    transform: rotate(-1deg);
+}
+
+.memory-subtitle {
+
+    position: relative;
+
+    z-index: 50;
+
+    text-align: center;
+
+    margin-top: -10px;
+
+    color: #4b3632;
+
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(17px,2.5vw,25px);
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   HEART COLLAGE AREA
+
+   The 21 photos are individually positioned to create
+   the shape of a heart.
+========================================================= */
+
+.heart-collage {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 51%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 720px;
+
+    height: 500px;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   PHOTO STYLE
+========================================================= */
+
+.heart-photo {
+
+    position: absolute;
+
+    width: 92px;
+
+    height: 103px;
+
+    object-fit: cover;
+
+    padding: 6px;
+
+    background: white;
+
+    border: 1px solid #e9e0d0;
+
+    box-shadow:
+        0 4px 9px rgba(0,0,0,.25);
+
+    transition:
+        transform .3s ease,
+        z-index .3s ease;
+
+    z-index: 10;
+}
+
+.heart-photo:hover {
+
+    z-index: 100;
+
+    transform:
+        scale(1.15)
+        rotate(0deg) !important;
+}
+
+
+/* =========================================================
+   HEART SHAPE — ROW 1
+   4 photos = two upper lobes
+========================================================= */
+
+.hp1 {
+    left: 125px;
+    top: 35px;
+    transform: rotate(-7deg);
+}
+
+.hp2 {
+    left: 220px;
+    top: 22px;
+    transform: rotate(4deg);
+}
+
+.hp3 {
+    left: 400px;
+    top: 22px;
+    transform: rotate(-4deg);
+}
+
+.hp4 {
+    left: 495px;
+    top: 35px;
+    transform: rotate(7deg);
+}
+
+
+/* =========================================================
+   HEART SHAPE — ROW 2
+   6 photos = widest part
+========================================================= */
+
+.hp5 {
+    left: 65px;
+    top: 125px;
+    transform: rotate(5deg);
+}
+
+.hp6 {
+    left: 160px;
+    top: 115px;
+    transform: rotate(-4deg);
+}
+
+.hp7 {
+    left: 255px;
+    top: 120px;
+    transform: rotate(3deg);
+}
+
+.hp8 {
+    left: 350px;
+    top: 120px;
+    transform: rotate(-3deg);
+}
+
+.hp9 {
+    left: 445px;
+    top: 115px;
+    transform: rotate(4deg);
+}
+
+.hp10 {
+    left: 540px;
+    top: 125px;
+    transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   HEART SHAPE — ROW 3
+========================================================= */
+
+.hp11 {
+    left: 95px;
+    top: 220px;
+    transform: rotate(-5deg);
+}
+
+.hp12 {
+    left: 190px;
+    top: 215px;
+    transform: rotate(4deg);
+}
+
+.hp13 {
+    left: 285px;
+    top: 220px;
+    transform: rotate(-3deg);
+}
+
+.hp14 {
+    left: 380px;
+    top: 215px;
+    transform: rotate(5deg);
+}
+
+.hp15 {
+    left: 475px;
+    top: 220px;
+    transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   HEART SHAPE — ROW 4
+========================================================= */
+
+.hp16 {
+    left: 165px;
+    top: 315px;
+    transform: rotate(5deg);
+}
+
+.hp17 {
+    left: 260px;
+    top: 320px;
+    transform: rotate(-4deg);
+}
+
+.hp18 {
+    left: 355px;
+    top: 315px;
+    transform: rotate(4deg);
+}
+
+
+/* =========================================================
+   HEART SHAPE — ROW 5
+========================================================= */
+
+.hp19 {
+    left: 235px;
+    top: 405px;
+    transform: rotate(-4deg);
+}
+
+.hp20 {
+    left: 330px;
+    top: 405px;
+    transform: rotate(5deg);
+}
+
+
+/* =========================================================
+   HEART POINT
+========================================================= */
+
+.hp21 {
+    left: 282px;
+    top: 450px;
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   HEART OUTLINE DECORATION
+
+   Very subtle dotted heart behind photos.
+========================================================= */
+
+.heart-outline {
+
+    position: absolute;
+
+    left: 50%;
+    top: 51%;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 650px;
+    height: 470px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.heart-outline::before {
+
+    content: "♥";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size: 510px;
+
+    color:
+        rgba(170,55,65,.055);
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   SIDE LOVE NOTES
+========================================================= */
+
+.final-note {
+
+    position: absolute;
+
+    z-index: 45;
+
+    color: #543936;
+
+    font-family:
+        "Comic Sans MS",
+        "Segoe Print",
+        cursive;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    max-width: 170px;
+}
+
+.final-note-left {
+
+    left: 4%;
+
+    top: 39%;
+
+    transform:
+        rotate(-6deg);
+}
+
+.final-note-right {
+
+    right: 4%;
+
+    top: 38%;
+
+    transform:
+        rotate(6deg);
+}
+
+.final-note-bottom-left {
+
+    left: 7%;
+
+    bottom: 13%;
+
+    transform:
+        rotate(-5deg);
+}
+
+.final-note-bottom-right {
+
+    right: 7%;
+
+    bottom: 13%;
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* =========================================================
+   HEART DECORATIONS
+========================================================= */
+
+.final-heart {
+
+    position: absolute;
+
+    color: #9d292d;
+
+    z-index: 45;
+
+    font-size: 28px;
+}
+
+.final-heart-1 {
+    left: 22%;
+    top: 29%;
+}
+
+.final-heart-2 {
+    right: 22%;
+    top: 29%;
+}
+
+.final-heart-3 {
+    left: 20%;
+    bottom: 25%;
+}
+
+.final-heart-4 {
+    right: 20%;
+    bottom: 24%;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.final-star {
+
+    position: absolute;
+
+    color: #8e292c;
+
+    font-size: 28px;
+
+    z-index: 45;
+}
+
+.final-star-1 {
+    left: 27%;
+    top: 25%;
+}
+
+.final-star-2 {
+    right: 27%;
+    top: 25%;
+}
+
+.final-star-3 {
+    left: 27%;
+    bottom: 22%;
+}
+
+.final-star-4 {
+    right: 27%;
+    bottom: 21%;
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+========================================================= */
+
+.memory-bottom-text {
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #783a3a;
+
+    font-family: cursive;
+
+    font-size: 17px;
+
+    z-index: 70;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px) {
+
+    .heart-collage {
+
+        transform:
+            translate(-50%,-50%)
+            scale(.75);
+
+        transform-origin: center;
+    }
+
+    .final-note {
+
+        font-size: 12px;
+
+        max-width: 100px;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .heart-collage {
+
+        transform:
+            translate(-50%,-50%)
+            scale(.57);
+    }
+
+    .memory-title {
+
+        font-size: 42px;
+    }
+
+    .memory-subtitle {
+
+        font-size: 15px;
+    }
+
+    .final-note {
+
+        font-size: 9px;
+
+        max-width: 75px;
+    }
+
+    .final-heart,
+    .final-star {
+
+        font-size: 18px;
+    }
+
+}
+
+
+@media(max-width:430px) {
+
+    .heart-collage {
+
+        transform:
+            translate(-50%,-50%)
+            scale(.47);
+    }
+
+}
+
+
+/* =========================================================
+   END CSS
+========================================================= */
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     PAGE 1 — ENVELOPE
+======================================================= -->
+
+<section
+    class="screen envelope-screen"
+    id="envelopeScreen"
+>
+
+    <div
+        class="envelope"
+        id="envelope"
+    >
+
+        <div class="envelope-flap"></div>
+
+        <div
+            class="gold-seal"
+            id="seal"
+        >
+            ❤
+        </div>
+
+    </div>
+
+    <div class="envelope-text">
+        Tap the little heart ❤️
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PAGE 2 — COVER
+======================================================= -->
+
+<section
+    class="screen cover-screen hidden"
+    id="coverScreen"
+>
+
+    <div class="vintage-card">
+
+        <div class="cover-content">
+
+            <div class="cover-small">
+                To my favourite person
+            </div>
+
+            <div class="cover-title">
+                Happy<br>
+                Boyfriend's Day
+            </div>
+
+            <div class="cover-love">
+                My Love &lt;3
+            </div>
+
+            <div class="cover-heart">
+                ♡ ✦ ♡
+            </div>
+
+        </div>
+
+
+        <div class="couple-container">
+
+            <img
+                src="couple.png"
+                class="couple"
+                alt="Cute couple"
+            >
+
+        </div>
+
+
+        <button
+            class="tap-button"
+            id="nextCover"
+        >
+            Tap to &gt;&gt;&gt;
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PAGE 3 — LETTER
+======================================================= -->
+
+<section
+    class="screen scrapbook-screen hidden"
+    id="scrapbookScreen"
+>
+
+    <div class="scrapbook">
+
+        <h1 class="scrapbook-title">
+            A little letter for you ♡
+        </h1>
+
+
+        <div class="letter-area">
+
+            <p>
+                My Baby,
+            </p>
+
+            <p>
+                Happy Boyfriend's Day to the person who somehow
+                manages to make my ordinary days feel so much
+                more special. ❤️
+            </p>
+
+            <p>
+                I know we're far away from each other, and honestly,
+                sometimes I really hate the distance. I miss being
+                able to see you, talk to you whenever I want, and
+                just have you beside me.
+            </p>
+
+            <p>
+                But even with all these miles between us, you still
+                manage to make me feel loved, cared for and understood.
+                Somehow, a simple message from you can make my entire
+                day better.
+            </p>
+
+            <p>
+                Thank you for being my favourite person, my comfort,
+                my safe place and also the person I can annoy forever. 😭❤️
+            </p>
+
+            <p>
+                I can't wait for the day when the distance between us
+                is no longer a thing and I can finally spend all the
+                time with you that I've been missing.
+            </p>
+
+            <p>
+                Until then, just remember that no matter how far away
+                you are, you are always very close to my heart.
+            </p>
+
+            <p>
+                I love you so much, Baby. ❤️
+            </p>
+
+        </div>
+
+
+        <div class="photos">
+
+            <img
+                src="3.jpg"
+                alt="Memory"
+            >
+
+            <img
+                src="6.jpg"
+                alt="Memory"
+            >
+
+            <img
+                src="9.jpg"
+                alt="Memory"
+            >
+
+        </div>
+
+
+        <button
+            class="scrap-next"
+            id="nextScrap"
+        >
+            One more thing... ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PAGE 4 — YOU ARE MY
+======================================================= -->
+
+<section
+    class="screen page-four hidden"
+    id="pageFour"
+>
+
+    <div class="love-paper">
+
+
+        <h1 class="love-title">
+            YOU ARE MY
+        </h1>
+
+
+        <div class="doodle doodle-one">
+            ✦
+        </div>
+
+        <div class="doodle doodle-two">
+            ♡
+        </div>
+
+        <div class="doodle doodle-three">
+            ✿
+        </div>
+
+        <div class="doodle doodle-four">
+            ✦
+        </div>
+
+
+        <!-- LABELS -->
+
+        <div class="love-label label-one">
+            my lifeline ♡
+        </div>
+
+        <div class="love-label label-two">
+            my fav human
+        </div>
+
+        <div class="love-label label-three">
+            my biggest supporter
+        </div>
+
+        <div class="love-label label-four">
+            my pookie baby ♡
+        </div>
+
+        <div class="love-label label-five">
+            my comfort person
+        </div>
+
+        <div class="love-label label-six">
+            my safe place
+        </div>
+
+
+        <!-- =================================================
+             CURVED ARROWS
+        ================================================= -->
+
+        <svg
+            class="curved-arrow arrow-top-left"
+            viewBox="0 0 230 150"
+        >
+
+            <path
+                d="
+                    M 30 15
+                    C 28 65,
+                      75 65,
+                      115 115
+                "
+            />
+
+            <path
+                d="
+                    M 115 115
+                    L 101 107
+                    M 115 115
+                    L 108 101
+                "
+            />
+
+        </svg>
+
+
+        <svg
+            class="curved-arrow arrow-top-right"
+            viewBox="0 0 230 150"
+        >
+
+            <path
+                d="
+                    M 200 15
+                    C 202 65,
+                      155 65,
+                      115 115
+                "
+            />
+
+            <path
+                d="
+                    M 115 115
+                    L 129 107
+                    M 115 115
+                    L 122 101
+                "
+            />
+
+        </svg>
+
+
+        <svg
+            class="curved-arrow arrow-bottom-left"
+            viewBox="0 0 230 150"
+        >
+
+            <path
+                d="
+                    M 30 120
+                    C 45 80,
+                      80 80,
+                      120 35
+                "
+            />
+
+            <path
+                d="
+                    M 120 35
+                    L 105 39
+                    M 120 35
+                    L 113 49
+                "
+            />
+
+        </svg>
+
+
+        <svg
+            class="curved-arrow arrow-bottom-right"
+            viewBox="0 0 230 150"
+        >
+
+            <path
+                d="
+                    M 200 120
+                    C 185 80,
+                      150 80,
+                      110 35
+                "
+            />
+
+            <path
+                d="
+                    M 110 35
+                    L 125 39
+                    M 110 35
+                    L 117 49
+                "
+            />
+
+        </svg>
+
+
+        <!-- CENTER PHOTO -->
+
+        <img
+            src="2.jpg"
+            class="center-photo"
+            alt="My favourite person"
+        >
+
+
+        <button
+            class="click-me"
+            id="clickMe"
+        >
+            click me ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     POPUP
+======================================================= -->
+
+<div
+    class="popup"
+    id="popup"
+>
+
+    <div class="popup-card">
+
+        <h2>
+            My Baby ❤️
+        </h2>
+
+        <p>
+
+            If I could choose one person to annoy,
+            love, miss, laugh with and make memories
+            with for the rest of my life...
+
+            <br><br>
+
+            I'd still choose you.
+
+            <br><br>
+
+            Every single time. ❤️
+
+        </p>
+
+
+        <button
+            class="close-popup"
+            id="closePopup"
+        >
+            Moreee Aheaddd Click For Moreeeeee
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =======================================================
+     PAGE 5 — HEART-SHAPED PHOTO COLLAGE
+======================================================= -->
+
+<section
+    class="screen memory-screen hidden"
+    id="memoryScreen"
+>
+
+    <div class="memory-paper">
+
+
+        <!-- TITLE -->
+
+        <h1 class="memory-title">
+            I LOVE YOU
+        </h1>
+
+        <div class="memory-subtitle">
+            Always and forever &lt;3
+        </div>
+
+
+        <!-- =================================================
+             SUBTLE HEART BACKGROUND
+        ================================================= -->
+
+        <div class="heart-outline"></div>
+
+
+        <!-- =================================================
+             SIDE NOTES
+        ================================================= -->
+
+        <div class="final-note final-note-left">
+
+            "You are my<br>
+            favourite person<br>
+            in the whole world."
+
+        </div>
+
+
+        <div class="final-note final-note-right">
+
+            "My home is<br>
+            wherever<br>
+            you are." ♡
+
+        </div>
+
+
+        <div class="final-note final-note-bottom-left">
+
+            "You + Me<br>
+            forever." ❤️
+
+        </div>
+
+
+        <div class="final-note final-note-bottom-right">
+
+            "I would choose<br>
+            you every time."
+
+        </div>
+
+
+        <!-- =================================================
+             HEART DECORATIONS
+        ================================================= -->
+
+        <div class="final-heart final-heart-1">
+            ♥
+        </div>
+
+        <div class="final-heart final-heart-2">
+            ♥
+        </div>
+
+        <div class="final-heart final-heart-3">
+            ♥
+        </div>
+
+        <div class="final-heart final-heart-4">
+            ♥
+        </div>
+
+
+        <div class="final-star final-star-1">
+            ★
+        </div>
+
+        <div class="final-star final-star-2">
+            ★
+        </div>
+
+        <div class="final-star final-star-3">
+            ★
+        </div>
+
+        <div class="final-star final-star-4">
+            ★
+        </div>
+
+
+        <!-- =================================================
+             HEART-SHAPED PHOTO COLLAGE
+        ================================================= -->
+
+        <div class="heart-collage">
+
+
+            <!-- ROW 1 -->
+
+            <img
+                src="1.jpg"
+                class="heart-photo hp1"
+                alt="Memory 1"
+            >
+
+            <img
+                src="2.jpg"
+                class="heart-photo hp2"
+                alt="Memory 2"
+            >
+
+            <img
+                src="3.jpg"
+                class="heart-photo hp3"
+                alt="Memory 3"
+            >
+
+            <img
+                src="4.jpg"
+                class="heart-photo hp4"
+                alt="Memory 4"
+            >
+
+
+            <!-- ROW 2 -->
+
+            <img
+                src="5.jpg"
+                class="heart-photo hp5"
+                alt="Memory 5"
+            >
+
+            <img
+                src="6.jpg"
+                class="heart-photo hp6"
+                alt="Memory 6"
+            >
+
+            <img
+                src="7.jpg"
+                class="heart-photo hp7"
+                alt="Memory 7"
+            >
+
+            <img
+                src="8.jpg"
+                class="heart-photo hp8"
+                alt="Memory 8"
+            >
+
+            <img
+                src="9.jpg"
+                class="heart-photo hp9"
+                alt="Memory 9"
+            >
+
+            <img
+                src="10.jpg"
+                class="heart-photo hp10"
+                alt="Memory 10"
+            >
+
+
+            <!-- ROW 3 -->
+
+            <img
+                src="11.jpg"
+                class="heart-photo hp11"
+                alt="Memory 11"
+            >
+
+            <img
+                src="12.jpg"
+                class="heart-photo hp12"
+                alt="Memory 12"
+            >
+
+            <img
+                src="13.jpg"
+                class="heart-photo hp13"
+                alt="Memory 13"
+            >
+
+            <img
+                src="14.jpg"
+                class="heart-photo hp14"
+                alt="Memory 14"
+            >
+
+            <img
+                src="15.jpg"
+                class="heart-photo hp15"
+                alt="Memory 15"
+            >
+
+
+            <!-- ROW 4 -->
+
+            <img
+                src="16.jpg"
+                class="heart-photo hp16"
+                alt="Memory 16"
+            >
+
+            <img
+                src="17.jpg"
+                class="heart-photo hp17"
+                alt="Memory 17"
+            >
+
+            <img
+                src="18.jpg"
+                class="heart-photo hp18"
+                alt="Memory 18"
+            >
+
+
+            <!-- ROW 5 -->
+
+            <img
+                src="19.jpg"
+                class="heart-photo hp19"
+                alt="Memory 19"
+            >
+
+            <img
+                src="20.jpg"
+                class="heart-photo hp20"
+                alt="Memory 20"
+            >
+
+
+            <!-- HEART POINT -->
+
+            <img
+                src="21.jpg"
+                class="heart-photo hp21"
+                alt="Memory 21"
+            >
+
+        </div>
+
+
+        <!-- =================================================
+             BOTTOM
+        ================================================= -->
+
+        <div class="memory-bottom-text">
+            made with all my love ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+
+/* =========================================================
+   PAGE 1 → PAGE 2
+========================================================= */
+
+const envelope =
+    document.getElementById("envelope");
+
+const seal =
+    document.getElementById("seal");
+
+const envelopeScreen =
+    document.getElementById("envelopeScreen");
+
+const coverScreen =
+    document.getElementById("coverScreen");
+
+
+seal.addEventListener(
+    "click",
+    function () {
+
+        envelope.classList.add("open");
+
+        setTimeout(
+            function () {
+
+                envelopeScreen.classList.add(
+                    "hidden"
+                );
+
+                coverScreen.classList.remove(
+                    "hidden"
+                );
+
+            },
+            850
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PAGE 2 → PAGE 3
+========================================================= */
+
+const nextCover =
+    document.getElementById("nextCover");
+
+const scrapbookScreen =
+    document.getElementById("scrapbookScreen");
+
+
+nextCover.addEventListener(
+    "click",
+    function () {
+
+        coverScreen.classList.add(
+            "hidden"
+        );
+
+        scrapbookScreen.classList.remove(
+            "hidden"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PAGE 3 → PAGE 4
+========================================================= */
+
+const nextScrap =
+    document.getElementById("nextScrap");
+
+const pageFour =
+    document.getElementById("pageFour");
+
+
+nextScrap.addEventListener(
+    "click",
+    function () {
+
+        scrapbookScreen.classList.add(
+            "hidden"
+        );
+
+        pageFour.classList.remove(
+            "hidden"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   PAGE 4 → POPUP
+========================================================= */
+
+const clickMe =
+    document.getElementById("clickMe");
+
+const popup =
+    document.getElementById("popup");
+
+
+clickMe.addEventListener(
+    "click",
+    function () {
+
+        popup.classList.add("show");
+
+    }
+);
+
+
+/* =========================================================
+   POPUP → FINAL HEART PAGE
+========================================================= */
+
+const closePopup =
+    document.getElementById("closePopup");
+
+const memoryScreen =
+    document.getElementById("memoryScreen");
+
+
+closePopup.addEventListener(
+    "click",
+    function () {
+
+        popup.classList.remove("show");
+
+        setTimeout(
+            function () {
+
+                pageFour.classList.add(
+                    "hidden"
+                );
+
+                memoryScreen.classList.remove(
+                    "hidden"
+                );
+
+            },
+            300
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CLICK OUTSIDE POPUP
+========================================================= */
+
+popup.addEventListener(
+    "click",
+    function (event) {
+
+        if (
+            event.target === popup
+        ) {
+
+            popup.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
